@@ -21,7 +21,7 @@
 ### Запуск через Docker Compose
 
 ```bash
-git clone <ваш-репозиторий>
+git clone https://github.com/Alex5200/notificationFastapi.git
 cd notification-service
 docker-compose up --build
 ```
