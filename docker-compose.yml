@@ -1,18 +1,19 @@
 services:
+  redis-server:
+    container_name: notification-Redis
+    image: "redis:8.4-alpine"
+    restart: always
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
   app:
     container_name: notification-FastAPI
     build: .
     ports:
       - "8000:8000"
     command: uvicorn app.main:app --host 0.0.0.0 --port 8000
-  redis-server:
-    container_name: notification-Redis
-    image: "redis:latest"
-    restart: always
-    ports:
-      - "6379:6379"
-    volumes:
-      - redis_data:/data
+
   test:
     container_name: notification-pytest
     build: .

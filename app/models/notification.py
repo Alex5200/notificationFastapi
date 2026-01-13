@@ -30,7 +30,7 @@ class NotificationRecord(BaseModel):
             "sent_at": self.sent_at.isoformat() if self.sent_at else ""
         }
 
-   class NotificationRecord(BaseModel):
+class NotificationRecord(BaseModel):
     user_id: int = Field(..., gt=0)
     message: str = Field(..., min_length=1, max_length=1000)
     type: NotificationType
