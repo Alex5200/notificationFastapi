@@ -3,6 +3,7 @@ pydantic==2.12.5
 fastapi==0.128.0
 pytest==8.3.4
 pytest-asyncio==0.25.0
-logging
-httpx
-redis
+httpx==0.28.1
+redis==7.1.0
+dotenv==0.9.9
+pydantic-settings==2.12.0
